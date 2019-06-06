@@ -287,16 +287,16 @@
 
       templateContent = '<table>'+
          '<tr>'+
-           '<td><a href="#" data-action="incrementHour"><span class="'+ this.icons.up +'"></span></a></td>'+
+           '<td><a href="#" data-action="incrementHour">' + getIcon(this.icons.up) + '</a></td>'+
            '<td class="separator">&nbsp;</td>'+
-           '<td><a href="#" data-action="incrementMinute"><span class="'+ this.icons.up +'"></span></a></td>'+
+           '<td><a href="#" data-action="incrementMinute">' + getIcon(this.icons.up) + '</a></td>'+
            (this.showSeconds ?
              '<td class="separator">&nbsp;</td>'+
-             '<td><a href="#" data-action="incrementSecond"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td><a href="#" data-action="incrementSecond">' + getIcon(this.icons.up) + '</a></td>'
            : '') +
            (this.showMeridian ?
              '<td class="separator">&nbsp;</td>'+
-             '<td class="meridian-column"><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td class="meridian-column"><a href="#" data-action="toggleMeridian">' + getIcon(this.icons.up) + '</a></td>'
            : '') +
          '</tr>'+
          '<tr>'+
@@ -313,16 +313,16 @@
            : '') +
          '</tr>'+
          '<tr>'+
-           '<td><a href="#" data-action="decrementHour"><span class="'+ this.icons.down +'"></span></a></td>'+
+           '<td><a href="#" data-action="decrementHour">' + getIcon(this.icons.down) + '</a></td>'+
            '<td class="separator"></td>'+
-           '<td><a href="#" data-action="decrementMinute"><span class="'+ this.icons.down +'"></span></a></td>'+
+           '<td><a href="#" data-action="decrementMinute">' + getIcon(this.icons.down) + '</a></td>'+
            (this.showSeconds ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="decrementSecond"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td><a href="#" data-action="decrementSecond">' + getIcon(this.icons.down) + '</a></td>'
            : '') +
            (this.showMeridian ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td><a href="#" data-action="toggleMeridian">' + getIcon(this.icons.down) + '</a></td>'
            : '') +
          '</tr>'+
        '</table>';
@@ -348,6 +348,10 @@
       }
 
       return template;
+
+      function getIcon(name) {
+          return feather.icons[name].toSvg();
+      }
     },
 
     getTime: function() {
@@ -1151,8 +1155,8 @@
     appendWidgetTo: 'body',
     showWidgetOnAddonClick: true,
     icons: {
-      up: 'glyphicon glyphicon-chevron-up',
-      down: 'glyphicon glyphicon-chevron-down'
+      up: 'chevron-up',
+      down: 'chevron-down'
     },
     maxHours: 24,
     explicitMode: false
