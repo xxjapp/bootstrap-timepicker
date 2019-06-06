@@ -108,7 +108,7 @@ module.exports = function(grunt) {
         }
       },
       less: {
-        files: ['css/timepicker.less'],
+        files: ['css/bootstrap-timepicker.less'],
         tasks: ['less:dev'],
         options: {
           livereload: true

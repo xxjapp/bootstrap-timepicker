@@ -689,9 +689,11 @@
                     left = windowWidth - widgetWidth - visualPadding;
                 }
             }
+
             // auto y orientation is best-situation: top or bottom, no fudging, decision based on which shows more of the widget
-            var yorient = this.orientation.y,
-                var topOverflow, bottomOverflow;
+            var yorient = this.orientation.y;
+            var topOverflow, bottomOverflow;
+
             if (yorient === 'auto') {
                 topOverflow = -scrollTop + offset.top - widgetHeight;
                 bottomOverflow = scrollTop + windowHeight - (offset.top + height + widgetHeight);
