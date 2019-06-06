@@ -7,7 +7,6 @@ _SpecRunner.html
 
 # build artifacts
 js/bootstrap-timepicker.min.js
-css/bootstrap-timepicker.css
 css/bootstrap-timepicker.min.css
 
 # bower artifacts for test
