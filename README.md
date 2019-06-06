@@ -5,6 +5,8 @@ Timepicker for Twitter Bootstrap
 
 A simple timepicker component for Twitter Bootstrap.
 
+This is a modified version of original bootstrap-timepicker to let bootstrap-timepicker work with new bootstrap.
+
 Status
 ======
 Please take a look at the `CHANGELOG.md` and the issues tab for issues we're
